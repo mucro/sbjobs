@@ -49,7 +49,7 @@ class wp_sb_plugin extends WP_Widget {
         <input class="widefat" id="<?php echo $this->get_field_id('affiliate_id'); ?>" name="<?php echo $this->get_field_name('affiliate_id'); ?>" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="<?php echo $affiliate_id; ?>" />
         </p>
         
-        <h3>Display preferences</h3>
+        <h3><?php echo __('Display preferences', 'sbjobs')?></h3>
         <p>
         <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Job listing count', 'sbjobs'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('count'); ?>" name="<?php echo $this->get_field_name('count'); ?>" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="<?php echo $count; ?>" />
