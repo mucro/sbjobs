@@ -1,0 +1,60 @@
+.sb_job_listing {
+    list-style: none outside;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+ul.sb_meta {
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.sb_meta li {
+    list-style: none outside;
+    float: none;
+    display: inline;
+    padding: 0;
+    font-weight: 400;
+}
+
+.sb_location {
+    color: #7f5e08;
+}
+
+.sb_job_type {
+    color: #888;
+}
+
+.sb_sep:after {
+    padding: 0 0 0 .5em;
+    content: "\25B8";
+    color: #000;
+}
+
+.sb_credit {
+    text-align: right;
+    color: #b8b8b8;
+    font-size: smaller;
+}
+
+.sb_credit a {
+        color: #989898;
+        text-decoration: none;
+        border-bottom: 1px solid transparent !important;
+}
+
+.sb_button {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: smaller;
+    margin-top: 40px;
+}
