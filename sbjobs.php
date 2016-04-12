@@ -132,6 +132,11 @@ function register_plugin_styles() {
 	wp_enqueue_style( 'sbjobs' );
 }
 
-add_shortcode( 'sb_jobs', 'sb_jobs_shortcode' );
+function my_load_plugin_textdomain() {
+    load_plugin_textdomain( 'sbjobs', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+
+add_action( 'plugins_loaded', 'my_load_plugin_textdomain' );
 add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
+add_shortcode( 'sb_jobs', 'sb_jobs_shortcode' );
 ?>
