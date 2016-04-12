@@ -45,7 +45,7 @@ class wp_sb_plugin extends WP_Widget {
         </p>
         
         <p>
-        <label for="<?php echo $this->get_field_id('affiliate_id'); ?>"><?php _e('Affiliate ID (optional - <a href="http://www.startupbrett.de/affiliate/" target="_blank">StartupBrett Affiliate-Partner subscription</a>):', 'wp_sb_plugin'); ?></label>
+        <label for="<?php echo $this->get_field_id('affiliate_id'); ?>"><?php _e('Affiliate ID (optional - <a href="http://www.startupbrett.de/affiliate/" target="_blank">StartupBrett Affiliate-Partner subscription</a>):', 'sbjob'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('affiliate_id'); ?>" name="<?php echo $this->get_field_name('affiliate_id'); ?>" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="<?php echo $affiliate_id; ?>" />
         </p>
         
