@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: StartupBrett Jobs\n"
+"POT-Creation-Date: 2016-04-12 14:26+0200\n"
+"PO-Revision-Date: 2016-04-12 14:33+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: sbjobs.php\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: sbjobs.php:84
+msgid "No items"
+msgstr "Keine Einträge"
+
+#: sbjobs.php:100
+msgid "Everywhere"
+msgstr "Überall"
+
+#: sbjobs.php:119
+msgid "Submit job"
+msgstr "Stellenanzeige schalten"
+
+#: sbjobs.php:122
+msgid "Provided by"
+msgstr "Bereitgestellt durch"
+
+#: sbjobs_widget.php:7
+msgid "Lists jobs from StartupBrett"
+msgstr "Zeigt Stellenanzeigen von der StartupBrett Stellenbörse"
+
+#: sbjobs_widget.php:8
+msgid "StartupBrett Job Widget"
+msgstr "StartupBrett Job Widget"
+
+#: sbjobs_widget.php:28
+msgid "Jobs"
+msgstr "Stellenanzeigen"
+
+#: sbjobs_widget.php:43
+msgid "Widget Title"
+msgstr "Widget Titel"
+
+#: sbjobs_widget.php:48
+msgid ""
+"Affiliate ID (optional - <a href=\"http://www.startupbrett.de/affiliate/\" "
+"target=\"_blank\">StartupBrett Affiliate-Partner subscription</a>):"
+msgstr ""
+"Affiliate-ID (optional - <a href=\"http://www.startupbrett.de/affiliate/\" "
+"target=\"_blank\">StartupBrett Affiliate-Partner Anmeldung</a>):"
+
+#: sbjobs_widget.php:54
+msgid "Job listing count"
+msgstr "Anzahl Stellenanzeigen"
+
+#: sbjobs_widget.php:60
+msgid "Select employment relationship"
+msgstr "Arbeitsverhältnis auswählen"
+
+#: sbjobs_widget.php:77
+msgid "Select category"
+msgstr "Kategorie auswählen"
+
+#: sbjobs_widget.php:104
+msgid "Random order"
+msgstr "Zufällige Reihenfolge"
+
+#: sbjobs_widget.php:108
+msgid "Hide employment relationship"
+msgstr "Arbeitsverhältnis ausblenden"
+
+#: sbjobs_widget.php:112
+msgid "Hide job location"
+msgstr "Arbeitsort verbergen"
+
+#: sbjobs_widget.php:116
+msgid "Hide \"Submit job\"-button"
+msgstr "\"Stellananzeige schalten\"-Schaltfläche verbergen"
+
+#: sbjobs_widget.php:120
+msgid "Hide StartupBrett-Branding"
+msgstr "StartupBrett-Branding ausblenden"
+
+#: sbjobs_widget.php:123
+msgid "Button-color:"
+msgstr "Farbe der Schaltfläche"
+
+#. Plugin Name of the plugin/theme
+msgid "StartupBrett Jobs"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://www.mucro.de/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Widget zur Darstellung von StartupBrett Stellenanzeigen auf deiner Webseite/"
+"Blog. Optional mit Zusatzeinnahmen durch Affiliate-Links."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "mucro.de"
+msgstr ""
