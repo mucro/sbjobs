@@ -4,7 +4,7 @@ class wp_sb_plugin extends WP_Widget {
 
 	// constructor
 	function wp_sb_plugin() {
-        $widget_ops = array('classname' => 'wp_sb_plugin', 'description' => __('Zeigt Stellenanzeigen vom StartupBrett', 'sbjobs' ));
+        $widget_ops = array('classname' => 'wp_sb_plugin', 'description' => __('Lists jobs from StartupBrett', 'sbjobs' ));
         $this->WP_Widget('wp_sb_plugin', __('StartupBrett Job Widget', 'sbjobs'), $widget_ops);
 	}
 
@@ -45,19 +45,19 @@ class wp_sb_plugin extends WP_Widget {
         </p>
         
         <p>
-        <label for="<?php echo $this->get_field_id('affiliate_id'); ?>"><?php _e('Affiliate ID (optional - <a href="http://www.startupbrett.de/affiliate/" target="_blank">StartupBrett Affiliate-Partner Anmeldung</a>):', 'wp_sb_plugin'); ?></label>
+        <label for="<?php echo $this->get_field_id('affiliate_id'); ?>"><?php _e('Affiliate ID (optional - <a href="http://www.startupbrett.de/affiliate/" target="_blank">StartupBrett Affiliate-Partner subscription</a>):', 'wp_sb_plugin'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('affiliate_id'); ?>" name="<?php echo $this->get_field_name('affiliate_id'); ?>" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="<?php echo $affiliate_id; ?>" />
         </p>
         
-        <h3>Darstellung-Einstellungen</h3>
+        <h3>Display preferences</h3>
         <p>
-        <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Anzahl Stellenanzeigen', 'sbjobs'); ?></label>
+        <label for="<?php echo $this->get_field_id('count'); ?>"><?php _e('Job listing count', 'sbjobs'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('count'); ?>" name="<?php echo $this->get_field_name('count'); ?>" type="number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="<?php echo $count; ?>" />
         </p>
         <table>
         <tr>
         <p>
-        <td><label for="<?php echo $this->get_field_id('sbtypes'); ?>"><?php _e('Anstellungsverhältnis eingrenzen', 'sbjobs'); ?></label></td>
+        <td><label for="<?php echo $this->get_field_id('sbtypes'); ?>"><?php _e('Select employment relationship', 'sbjobs'); ?></label></td>
         <td><select name="<?php echo $this->get_field_name('sbtypes'); ?>" id="<?php echo $this->get_field_id('sbtypes'); ?>" >
             <option value="all" <?php echo selected( $sbtypes, 'all', false ); ?>>Alle anzeigen</option>
             <option value="ausbildung" <?php echo selected( $sbtypes, 'ausbildung', false ); ?>>Ausbildung</option>
@@ -74,7 +74,7 @@ class wp_sb_plugin extends WP_Widget {
         </tr>
         <tr>
         <p>
-        <td><label for="<?php echo $this->get_field_id('categories'); ?>"><?php _e('Kategorien eingrenzen', 'sbjobs'); ?></label></td>
+        <td><label for="<?php echo $this->get_field_id('categories'); ?>"><?php _e('Select category', 'sbjobs'); ?></label></td>
         <td><select name="<?php echo $this->get_field_name('categories'); ?>" id="<?php echo $this->get_field_id('categories'); ?>" >
             <option value="all" <?php echo selected( $categories, 'all', false ); ?>>Alle Kategorien</option>
             <option value="berater" <?php echo selected( $categories, 'berater', false ); ?>>Berater</option>
@@ -101,26 +101,26 @@ class wp_sb_plugin extends WP_Widget {
         </table>
         </p><p>
         <input class="widefat" id="<?php echo $this->get_field_id('order_by'); ?>" name="<?php echo $this->get_field_name('order_by'); ?>" type="checkbox" name="order_by" value="1" <?php echo checked( 1, $order_by, false);?> >
-        <label for="<?php echo $this->get_field_id('order_by'); ?>"><?php _e('Zufällige Reihenfolge', 'sbjobs'); ?></label>        
+        <label for="<?php echo $this->get_field_id('order_by'); ?>"><?php _e('Random order', 'sbjobs'); ?></label>        
         </p>
         <p>
         <input class="widefat" id="<?php echo $this->get_field_id('hide_type'); ?>" name="<?php echo $this->get_field_name('hide_type'); ?>" type="checkbox" name="hide_type" value="1" <?php echo checked( 1, $hide_type, false);?> >
-        <label for="<?php echo $this->get_field_id('hide_type'); ?>"><?php _e('Anstellungsverhältnis ausblenden', 'sbjobs'); ?></label>        
+        <label for="<?php echo $this->get_field_id('hide_type'); ?>"><?php _e('Hide employment relationship', 'sbjobs'); ?></label>        
         </p>
         <p>
         <input class="widefat" id="<?php echo $this->get_field_id('hide_location'); ?>" name="<?php echo $this->get_field_name('hide_location'); ?>" type="checkbox" name="hide_location" value="1" <?php echo checked( 1, $hide_location, false);?> >
-        <label for="<?php echo $this->get_field_id('hide_location'); ?>"><?php _e('Arbeitsort ausblenden', 'sbjobs'); ?></label>        
+        <label for="<?php echo $this->get_field_id('hide_location'); ?>"><?php _e('Hide job location', 'sbjobs'); ?></label>        
         </p>
         <p>
         <input class="widefat" id="<?php echo $this->get_field_id('hide_button'); ?>" name="<?php echo $this->get_field_name('hide_button'); ?>" type="checkbox" name="hide_button" value="1" <?php echo checked( 1, $hide_button, false);?> >
-        <label for="<?php echo $this->get_field_id('hide_button'); ?>"><?php _e('"Stellenanzeigen schalten"-Button ausblenden', 'sbjobs'); ?></label>        
+        <label for="<?php echo $this->get_field_id('hide_button'); ?>"><?php _e('Hide "Submit job"-button', 'sbjobs'); ?></label>        
         </p>
         <p>
         <input class="widefat" id="<?php echo $this->get_field_id('hide_credit'); ?>" name="<?php echo $this->get_field_name('hide_credit'); ?>" type="checkbox" name="hide_credit" value="1" <?php echo checked( 1, $hide_credit, false);?> >
-        <label for="<?php echo $this->get_field_id('hide_credit'); ?>"><?php _e('StartupBrett-Branding ausblenden', 'sbjobs'); ?></label>        
+        <label for="<?php echo $this->get_field_id('hide_credit'); ?>"><?php _e('Hide StartupBrett-Branding', 'sbjobs'); ?></label>        
         </p>
         <p>
-        <label for="<?php echo $this->get_field_id('buttoncolor'); ?>"><?php _e('Button-Farbe:', 'sbjobs'); ?></label>
+        <label for="<?php echo $this->get_field_id('buttoncolor'); ?>"><?php _e('Button-color:', 'sbjobs'); ?></label>
         <input class="widefat" id="<?php echo $this->get_field_id('buttoncolor'); ?>" name="<?php echo $this->get_field_name('buttoncolor'); ?>" type="text" value="<?php echo $buttoncolor; ?>" />
         </p>
         
