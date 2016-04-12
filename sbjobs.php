@@ -2,34 +2,24 @@
 /*
 Plugin Name: StartupBrett Jobs
 Plugin URI: http://www.mucro.de/
-Description: Stellenbörse für digitale Talente in deinem Blog
+Description: Widget zur Darstellung von StartupBrett Stellenanzeigen auf deiner Webseite/Blog. Optional mit Zusatzeinnahmen durch Affiliate-Links.
 Version: 1.0
-Author: Lukas Herbst
+Author: mucro.de
 Author URI: http://www.mucro.de/
 */
 
 
 /*****/
 /* 
-[[sb_jobs count="1" hide_credit="1"]]
-
 [sb_jobs count="1" hide_credit="1"]
-
-[[sb_jobs order_by="rand" types="praktikum,hilfskraft"]]
 
 [sb_jobs order_by="rand" types="praktikum,hilfskraft"]
 
-[[sb_jobs order_by="rand" types="vollzeit" categories="development"]]
-
 [sb_jobs order_by="rand" types="vollzeit" categories="development"]
-
-[[sb_jobs count="1" hide_type="1" hide_location="1"]]
 
 [sb_jobs count="1" hide_type="1" hide_location="1"]
 
-[[sb_jobs]]
-
-[sb_jobs]
+[sb_jobs button-color="#4CAF50" affiliate_id="3"]
 */
 /*****/
 
@@ -51,11 +41,9 @@ function sb_jobs_shortcode( $atts, $content = null ) {
         'order_by' => "",
         'types' => "",
         'categories' => "",
-        'theme' => "light",
         'button-color' => "#4CAF50",
     ), $atts );
       
-    // Get a SimplePie feed object from the specified feed source.
     $ref = "";
     $type = "";
     $cat = "";
@@ -68,6 +56,8 @@ function sb_jobs_shortcode( $atts, $content = null ) {
         
     $link = 'http://www.startupbrett.de/?feed=job_feed' . $type . $cat;
     $cache_key = md5($link);
+    
+    // non-persistant cache
     $rss = wp_cache_get($cache_key, 'sbjobs');
     if ( false === $rss ) {
 	    $rss = fetch_feed( $link );
@@ -76,15 +66,13 @@ function sb_jobs_shortcode( $atts, $content = null ) {
     
     $maxitems = 0;
 
-    if ( ! is_wp_error( $rss ) ) : // Checks that the object is created correctly
+    if ( ! is_wp_error( $rss ) ) : 
 
-        // Figure out how many total items there are, but limit it to 5. 
         if($a['order_by'] == "rand")
             $maxitems = 200;
         else
             $maxitems = $rss->get_item_quantity( (int)$a['count'] ); 
     
-        // Build an array of all the items, starting with element 0 (first element).
         $rss_items = $rss->get_items( 0, $maxitems );
 
     endif;

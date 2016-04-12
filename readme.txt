@@ -3,7 +3,7 @@ Contributors: mucrode
 Tags: widget widget,shortcode,job,startup
 Tested up to: 4.4.2
 
-Mehrwert für deine Leser und Zusatzeinnahmen für dich, duch die Anzeige von StartupBrett Stellenanzeigen. Als Widget oder mittels Shortcode.
+Mehrwert für deine Leser und Zusatzeinnahmen für dich - duch die Darstellung von StartupBrett Stellenanzeigen. Als Widget oder mittels Shortcode.
 
 == Description ==
 Werte deine Webseite/Blog auf mit Stellenanzeigen von StartupBrett.de. Damit lieferst du deinen Lesern nicht nur einen zusätzlichen Service, sondern schaffst als StartupBrett Affiliate auch noch ein zusätzliches Einkommen für deine Seite.
