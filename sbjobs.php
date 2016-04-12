@@ -6,6 +6,8 @@ Description: Widget zur Darstellung von StartupBrett Stellenanzeigen auf deiner 
 Version: 1.0
 Author: mucro.de
 Author URI: http://www.mucro.de/
+Text Domain: sbjobs
+Domain Path: /languages
 */
 
 
@@ -114,7 +116,7 @@ function sb_jobs_shortcode( $atts, $content = null ) {
         }
     }
     if(strlen($a['hide_button']) == 0)
-        $result .= '<a href="http://www.startupbrett.de/stellenanzeige-schalten/' . $ref . '"><p class="sb_button" style="background-color: ' . $a['button-color'] . '">' . __('Submit job') . '</p></a>';
+        $result .= '<a href="http://www.startupbrett.de/stellenanzeige-schalten/' . $ref . '"><p class="sb_button" style="background-color: ' . $a['button-color'] . '">' . __('Submit job', 'sbjobs') . '</p></a>';
     $result .= '</ul>';
     if(strlen($a['hide_credit']) == 0)
         $result .= '<p class="sb_credit">' . __('Provided by', 'sbjobs') . ' <a href="http://www.startupbrett.de/' . $ref . '" target="_blank">StartupBrett.de</a></p>';
