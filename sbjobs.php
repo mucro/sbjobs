@@ -3,7 +3,7 @@
 Plugin Name: StartupBrett Job Widget
 Plugin URI: http://www.mucro.de/
 Description: Widget zur Darstellung von StartupBrett Stellenanzeigen auf deiner Webseite/Blog. Optional mit Zusatzeinnahmen durch Affiliate-Links.
-Version: 1.0
+Version: 1.1
 Author: mucro.de
 Author URI: http://www.mucro.de/
 Text Domain: sbjobs
