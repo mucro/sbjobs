@@ -17,7 +17,7 @@ class wp_sb_plugin extends WP_Widget {
              
              $count = esc_attr($instance['count']);
              $hide_button = esc_attr($instance['hide_button']);
-             $hide_credit = esc_attr($instance['hide_credit']); 
+             $show_credit = esc_attr($instance['hide_credit']); 
              $hide_type = esc_attr($instance['hide_type']);
              $hide_location = esc_attr($instance['hide_location']);
              $order_by = esc_attr($instance['order_by']);
@@ -29,7 +29,7 @@ class wp_sb_plugin extends WP_Widget {
              $affiliate_id = '';
              $count = '5';
              $hide_button = '';
-             $hide_credit = '';
+             $show_credit = '';
              $hide_type = '';
              $hide_location = '';
              $order_by = '';
@@ -116,8 +116,8 @@ class wp_sb_plugin extends WP_Widget {
         <label for="<?php echo $this->get_field_id('hide_button'); ?>"><?php _e('Hide "Submit job"-button', 'sbjobs'); ?></label>        
         </p>
         <p>
-        <input class="widefat" id="<?php echo $this->get_field_id('hide_credit'); ?>" name="<?php echo $this->get_field_name('hide_credit'); ?>" type="checkbox" name="hide_credit" value="1" <?php echo checked( 1, $hide_credit, false);?> >
-        <label for="<?php echo $this->get_field_id('hide_credit'); ?>"><?php _e('Hide StartupBrett-Branding', 'sbjobs'); ?></label>        
+        <input class="widefat" id="<?php echo $this->get_field_id('show_credit'); ?>" name="<?php echo $this->get_field_name('show_credit'); ?>" type="checkbox" name="show_credit" value="1" <?php echo checked( 1, $show_credit, false);?> >
+        <label for="<?php echo $this->get_field_id('show_credit'); ?>"><?php _e('Show StartupBrett-Branding', 'sbjobs'); ?></label>        
         </p>
         <p>
         <label for="<?php echo $this->get_field_id('buttoncolor'); ?>"><?php _e('Button-color:', 'sbjobs'); ?></label>
@@ -135,7 +135,7 @@ class wp_sb_plugin extends WP_Widget {
       $instance['affiliate_id'] = strip_tags($new_instance['affiliate_id']);
       $instance['count'] = strip_tags($new_instance['count']);
       $instance['hide_button'] = strip_tags($new_instance['hide_button']);
-      $instance['hide_credit'] = strip_tags($new_instance['hide_credit']);
+      $instance['show_credit'] = strip_tags($new_instance['show_credit']);
       $instance['hide_type'] = strip_tags($new_instance['hide_type']);
       $instance['hide_location'] = strip_tags($new_instance['hide_location']);
       $instance['sbtypes'] = strip_tags($new_instance['sbtypes']);
@@ -156,7 +156,7 @@ class wp_sb_plugin extends WP_Widget {
         $affiliate_id = $instance['affiliate_id'];
         $buttoncolor = $instance['buttoncolor'];
         $hide_button = $instance['hide_button'];
-        $hide_credit = $instance['hide_credit'];
+        $show_credit = $instance['show_credit'];
         $hide_type = $instance['hide_type'];
         $hide_location = $instance['hide_location'];
         $types = $instance['sbtypes'];
@@ -193,8 +193,8 @@ class wp_sb_plugin extends WP_Widget {
         if( $hide_button ) {
           $options .= ' hide_button="1"';
         }
-        if( $hide_credit ) {
-          $options .= ' hide_credit="1"';
+        if( $show_credit ) {
+          $options .= ' show_credit="1"';
         }
         if( $hide_type ) {
           $options .= ' hide_type="1"';

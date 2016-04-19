@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: StartupBrett Jobs\n"
-"POT-Creation-Date: 2016-04-12 15:09+0200\n"
-"PO-Revision-Date: 2016-04-12 15:09+0200\n"
+"POT-Creation-Date: 2016-04-19 13:58+0200\n"
+"PO-Revision-Date: 2016-04-19 13:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -40,6 +40,7 @@ msgstr "Bereitgestellt durch"
 msgid "Lists jobs from StartupBrett"
 msgstr "Zeigt Stellenanzeigen von der StartupBrett Stellenbörse"
 
+#. Plugin Name of the plugin/theme
 #: sbjobs_widget.php:8
 msgid "StartupBrett Job Widget"
 msgstr "StartupBrett Job Widget"
@@ -93,16 +94,12 @@ msgid "Hide \"Submit job\"-button"
 msgstr "\"Stellananzeige schalten\"-Schaltfläche verbergen"
 
 #: sbjobs_widget.php:120
-msgid "Hide StartupBrett-Branding"
-msgstr "StartupBrett-Branding ausblenden"
+msgid "Show StartupBrett-Branding"
+msgstr "StartupBrett-Branding anzeigen"
 
 #: sbjobs_widget.php:123
 msgid "Button-color:"
 msgstr "Farbe der Schaltfläche"
-
-#. Plugin Name of the plugin/theme
-msgid "StartupBrett Jobs"
-msgstr ""
 
 #. Plugin URI of the plugin/theme
 #. Author URI of the plugin/theme
@@ -118,6 +115,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "mucro.de"
 msgstr ""
+
+#~ msgid "Hide StartupBrett-Branding"
+#~ msgstr "StartupBrett-Branding ausblenden"
 
 #~ msgid ""
 #~ "Affiliate ID (optional - <a href=\"http://www.startupbrett.de/affiliate/"

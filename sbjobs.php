@@ -38,7 +38,7 @@ function sb_jobs_shortcode( $atts, $content = null ) {
         'count' => "5",
         'hide_type' => "",
         'hide_location' => "",
-        'hide_credit' => "",
+        'show_credit' => "",
         'hide_button' => "",
         'order_by' => "",
         'types' => "",
@@ -118,7 +118,7 @@ function sb_jobs_shortcode( $atts, $content = null ) {
     if(strlen($a['hide_button']) == 0)
         $result .= '<a href="http://www.startupbrett.de/stellenanzeige-schalten/' . $ref . '"><p class="sb_button" style="background-color: ' . $a['button-color'] . '">' . __('Submit job', 'sbjobs') . '</p></a>';
     $result .= '</ul>';
-    if(strlen($a['hide_credit']) == 0)
+    if(strlen($a['show_credit']) == 1)
         $result .= '<p class="sb_credit">' . __('Provided by', 'sbjobs') . ' <a href="http://www.startupbrett.de/' . $ref . '" target="_blank">StartupBrett.de</a></p>';
     
     return $result . $content;
