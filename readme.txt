@@ -32,8 +32,10 @@ Bislang keine
 3. Shortcode Integration
 
 == Changelog ==
+1.1.0
+*   converted hide_credit to show_credit due to WordPress policy issues
 1.0.0
-*   Erste Version
+*   First version
 
 == Upgrade Notice ==
 keine
