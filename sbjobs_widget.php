@@ -1,11 +1,11 @@
 <?php
 
-class wp_sb_plugin extends WP_Widget {
+class sbjobs_plugin extends WP_Widget {
 
 	// constructor
-	function wp_sb_plugin() {
-        $widget_ops = array('classname' => 'wp_sb_plugin', 'description' => __('Lists jobs from StartupBrett', 'sbjobs' ));
-        $this->WP_Widget('wp_sb_plugin', __('StartupBrett Job Widget', 'sbjobs'), $widget_ops);
+	function sbjobs_plugin() {
+        $widget_ops = array('classname' => 'sbjobs_plugin', 'description' => __('Lists jobs from StartupBrett', 'sbjobs' ));
+        $this->WP_Widget('sbjobs_plugin', __('StartupBrett Job Widget', 'sbjobs'), $widget_ops);
 	}
 
 	// widget form creation
@@ -212,6 +212,6 @@ class wp_sb_plugin extends WP_Widget {
 }
 
 // register widget
-add_action('widgets_init', create_function('', 'return register_widget("wp_sb_plugin");'));
+add_action('widgets_init', create_function('', 'return register_widget("sbjobs_plugin");'));
 
 ?>

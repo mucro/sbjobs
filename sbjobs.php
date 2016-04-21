@@ -31,7 +31,7 @@ include_once( 'sbjobs_widget.php' );
 /**
 * sb_jobs
 */
-function sb_jobs_shortcode( $atts, $content = null ) {
+function sbjobs_shortcode( $atts, $content = null ) {
     
     $a = shortcode_atts( array(
         'affiliate_id' => "",
@@ -127,16 +127,16 @@ function sb_jobs_shortcode( $atts, $content = null ) {
 /**
  * Register style sheet.
  */
-function register_plugin_styles() {
+function sbjobs_register_plugin_styles() {
 	wp_register_style( 'sbjobs', plugins_url( 'sbjobs/sbjobs.css' ) );
 	wp_enqueue_style( 'sbjobs' );
 }
 
-function my_load_plugin_textdomain() {
+function sbjobs_load_plugin_textdomain() {
     load_plugin_textdomain( 'sbjobs', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
-add_action( 'plugins_loaded', 'my_load_plugin_textdomain' );
-add_action( 'wp_enqueue_scripts', 'register_plugin_styles' );
-add_shortcode( 'sb_jobs', 'sb_jobs_shortcode' );
+add_action( 'plugins_loaded', 'sbjobs_load_plugin_textdomain' );
+add_action( 'wp_enqueue_scripts', 'sbjobs_register_plugin_styles' );
+add_shortcode( 'sb_jobs', 'sbjobs_shortcode' );
 ?>
