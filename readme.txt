@@ -1,4 +1,4 @@
-=== StartupBrett Job Widget ===
+﻿=== StartupBrett Job Widget ===
 Contributors: mucrode
 Tags: widget widget,shortcode,job,startup
 Tested up to: 4.4.2
@@ -24,14 +24,36 @@ Die Plugindateien nach wp-content/plugins/sbjobs kopieren, oder über das WordPr
 *   Alternativ können Sie das Plugin auch an beliebiger Stelle mittels Shortcodes integrieren
 
 == Frequently Asked Questions ==
-Bislang keine
+**Verwendung durch Shortcodes**
+
+Du kannst das Widget an jeder beliebiger Stelle, etwa innerhalb von Seiten oder Beiträgen, über sogenannte Shortcodes hinzufügen.
+
+Hierzu benutze einfach den Shortcode **[sb_jobs]**
+
+Um die Inhalte und die Darstellung zu verändern, kannst du zusätzliche Parameter spezifizieren:
+
+*   affiliate_id – Deine StartupBrett Affiliate ID (Registrierung über StartupBrett, optional)
+*   count – Anzahl der anzuzeigenden Stellenanzeigen (Standard: 5)
+*   hide_type – Verberge das Anstellungsverhältnis
+*   hide_location – Verberge den Arbeitsort
+*   show_credit – Zeige einen Hinweis auf StartupBrett.de
+*   hide_button – Verberge die Schaltfläche „Stellenanzeige schalten“
+*   order_by – Lege die Reihenfolge fest: rand (Zufällige Reihenfolge), <leer> (Nach Datum)
+*   types – Zeige nur Stellenanzeigen mit einem bestimmten Anstellungsverhältnis an
+*   categories – Zeige nur Stellenanzeigen einer bestimmten Kategorie an
+*   button-color- Lege die Farbe der Schaltfläche „Stellenanzeige schalten“ fest (HTML-Color Codes. Standard: #4CAF50)
+
+**Beispiel:**
+
+[sb_jobs order_by="rand" types="praktikum" count="3" hide_type="1" button-color="#900050" affiliate_id="3" show_credit="1"]
 
 == Screenshots ==
-1. Widget Einstellungen
-2. Widget Darstellung
-3. Shortcode Integration
+1. Widget Einstellungen widget.jpg
+2. Widget Darstellung sample.jpg
 
 == Changelog ==
+1.2.0
+*   added target="_blank" to all external links
 1.1.0
 *   converted hide_credit to show_credit due to WordPress policy issues
 1.0.0

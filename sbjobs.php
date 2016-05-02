@@ -3,7 +3,7 @@
 Plugin Name: StartupBrett Job Widget
 Plugin URI: http://www.mucro.de/
 Description: Widget zur Darstellung von StartupBrett Stellenanzeigen auf deiner Webseite/Blog. Optional mit Zusatzeinnahmen durch Affiliate-Links.
-Version: 1.1
+Version: 1.2
 Author: mucro.de
 Author URI: http://www.mucro.de/
 Text Domain: sbjobs
@@ -89,7 +89,7 @@ function sbjobs_shortcode( $atts, $content = null ) {
         $ii = 0;
         foreach ( $rss_items as $item ) {    
             $result .= '<li class="sb_job_listing">';
-            $result .= '	<a href="' . esc_url( $item->get_permalink() ) . $ref . '">';
+            $result .= '	<a href="' . esc_url( $item->get_permalink() ) . $ref . '" target="_blank">';
             $result .= '		<div class="sb_position">';
             $result .= '			<h3>' . esc_html( $item->get_title() ) . '</h3>';
             $result .= '		</div>';
@@ -116,7 +116,7 @@ function sbjobs_shortcode( $atts, $content = null ) {
         }
     }
     if(strlen($a['hide_button']) == 0)
-        $result .= '<a href="http://www.startupbrett.de/stellenanzeige-schalten/' . $ref . '"><p class="sb_button" style="background-color: ' . $a['button-color'] . '">' . __('Submit job', 'sbjobs') . '</p></a>';
+        $result .= '<a href="http://www.startupbrett.de/stellenanzeige-schalten/' . $ref . '" target="_blank"><p class="sb_button" style="background-color: ' . $a['button-color'] . '">' . __('Submit job', 'sbjobs') . '</p></a>';
     $result .= '</ul>';
     if(strlen($a['show_credit']) == 1)
         $result .= '<p class="sb_credit">' . __('Provided by', 'sbjobs') . ' <a href="http://www.startupbrett.de/' . $ref . '" target="_blank">StartupBrett.de</a></p>';
